@@ -2,7 +2,7 @@ name: update_steamWorkshop
 on:
   push:
     paths:
-      - 'Mods/*'
+      - 'Mods/**'
 
 jobs:
   job1:
