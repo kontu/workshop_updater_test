@@ -1,11 +1,12 @@
 name: update_steamWorkshop
+
 on:
   push:
     paths:
       - 'Mods/**'
 
 jobs:
-  job1:
+  updateWorkshop:
     runs-on: [ubuntu-latest]
     steps:
       - name: checkout
@@ -16,10 +17,10 @@ jobs:
         id: getfile
         run: |
           echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }}| xargs)"
-
-      - name: echo the changed files
+      - name: echo the changed files for kicks
         run: |
           for i in ${{ steps.getfile.outputs.files }}
           do
               echo $i
           done
+     # - name: 
