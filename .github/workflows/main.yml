@@ -11,8 +11,12 @@ jobs:
   updateWorkshop:
     runs-on: [ubuntu-latest]
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: "Workshop update"
-        uses: kontu/workshop@ac5db34f8ec3e19851b6b1b0e40fac1c430da569
+        uses: kontu/workshop@014f8d17a1f007732058707c747a204307ee4083
         with:
           path: 'Mods'
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
