@@ -2,8 +2,8 @@ name: update_steamWorkshop
 
 on:
   push:
-    paths:
-      - 'Mods/**'
+    # paths:
+    #   - 'Mods/**'
   workflow_dispatch:
 
 
@@ -17,7 +17,6 @@ jobs:
           path: 'Mods'
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
           steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
-          steamGuard: ::add-mask::${{ secrets.steamguard }}
           ssfnContents: ::add-mask::${{ secrets.ssfnContents }}
           ssfnFileName: ::add-mask::${{ secrets.ssfn_file_name }}
           steamConfigVdf: ::add-mask::${{ secrets.steam_config_vdf }}
