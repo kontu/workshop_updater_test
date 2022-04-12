@@ -19,8 +19,8 @@ jobs:
         uses: kontu/workshop@a7c27ce0f6ec07cf779a761ffafda06dcb118fc3
         with:
           path: 'Mods'
-          steamAcct: ::add-mask::${{ secrets.steamAcct }}
+          steamAcct: ${{ secrets.steamAcct }}
           steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
-          ssfnContents: ::add-mask::${{ secrets.ssfnContents }}
+          ssfnContents: ${{ secrets.ssfnContents }}
           ssfnFileName: 'ssfn9160040175199086881'
-          steamConfigVdf: ::add-mask::${{ secrets.steam_config_vdf }}
+          steamConfigVdf: ${{ secrets.steam_config_vdf }}
