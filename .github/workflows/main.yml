@@ -31,4 +31,4 @@ jobs:
           path: 'Mods'
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
           steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
-          files: ${{ steps.getfile.outputs.files }}
+          files: ${{ join(steps.getfile.outputs.files, '\n') }}
