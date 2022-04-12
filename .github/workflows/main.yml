@@ -26,9 +26,9 @@ jobs:
               echo $i
           done
       - name: "Workshop update"
-        uses: kontu/workshop@1953576ed84693422eab7e857beb9222e4c54863
+        uses: kontu/workshop@464b2ed573b6d07a6bdaba01b7dc660c377d61ba
         with:
           path: 'Mods'
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
           steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
-          files: ${{ join(steps.getfile.outputs.files, '\n') }}
+          files: ${{ steps.getfile.outputs.files }}
