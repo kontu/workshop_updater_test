@@ -11,24 +11,10 @@ jobs:
   updateWorkshop:
     runs-on: [ubuntu-latest]
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: get changed files
-        id: getfile
-        run: |
-          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }}| xargs)"
-      - name: echo the changed files for kicks
-        run: |
-          for i in ${{ steps.getfile.outputs.files }}
-          do
-              echo $i
-          done
       - name: "Workshop update"
-        uses: kontu/workshop@f22bd69d8fe94c741bb138991d186e845d485795
+        uses: kontu/workshop@0ac50976818f2aa281a2b4f49233d66faaf358ca
         with:
           path: 'Mods'
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
           steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
-          files: ${{ steps.getfile.outputs.files }}
+          steamGuard: ::add-mask::${{ secrets.steamguard }}
