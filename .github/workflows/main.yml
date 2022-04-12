@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'Mods/**'
+  workflow_dispatch:
+
 
 jobs:
   updateWorkshop:
@@ -23,4 +25,10 @@ jobs:
           do
               echo $i
           done
-     # - name: 
+      - name: "Workshop update"
+        uses: kontu/workshop/latest
+          with:
+            path: ''
+            steamAcct: ::add-mask::${{ secrets.steamAcct }}
+            steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
+            files: ${{ steps.getfile.outputs.files }}
