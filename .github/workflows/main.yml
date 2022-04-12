@@ -22,5 +22,5 @@ jobs:
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
           steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
           ssfnContents: ::add-mask::${{ secrets.ssfnContents }}
-          ssfnFileName: ::add-mask::${{ secrets.ssfn_file_name }}
+          ssfnFileName: ${{ secrets.ssfn_file_name }}
           steamConfigVdf: ::add-mask::${{ secrets.steam_config_vdf }}
