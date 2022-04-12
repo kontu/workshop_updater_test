@@ -26,7 +26,7 @@ jobs:
               echo $i
           done
       - name: "Workshop update"
-        uses: kontu/workshop@f822decd58dc7a6e4b44f85347b58458af820436
+        uses: kontu/workshop@fc42e356cfdb524bba1ac92e8a35086a31479855
         with:
           path: 'Mods'
           steamAcct: ${{ secrets.steamAcct }}
