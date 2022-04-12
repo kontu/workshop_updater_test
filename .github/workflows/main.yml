@@ -27,8 +27,8 @@ jobs:
           done
       - name: "Workshop update"
         uses: kontu/workshop/latest
-          with:
-            path: ''
-            steamAcct: ::add-mask::${{ secrets.steamAcct }}
-            steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
-            files: ${{ steps.getfile.outputs.files }}
+        with:
+          path: 'Mods'
+          steamAcct: ::add-mask::${{ secrets.steamAcct }}
+          steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
+          files: ${{ steps.getfile.outputs.files }}
