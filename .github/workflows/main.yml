@@ -12,7 +12,7 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: "Workshop update"
-        uses: kontu/workshop@e83f69ae0726722aabb53d9277ba0010ae173229
+        uses: kontu/workshop@ac5db34f8ec3e19851b6b1b0e40fac1c430da569
         with:
           path: 'Mods'
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
