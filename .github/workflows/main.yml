@@ -1,10 +1,10 @@
 name: update_steamWorkshop
 
 on:
-  workflow_dispatch:
   push:
     paths:
       - 'Mods/**'
+  workflow_dispatch:
 
 
 jobs:
