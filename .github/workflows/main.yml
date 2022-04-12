@@ -12,9 +12,12 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: "Workshop update"
-        uses: kontu/workshop@0ac50976818f2aa281a2b4f49233d66faaf358ca
+        uses: kontu/workshop@4e1f0d8dc9263c821697345f3ac54eb4defacb02
         with:
           path: 'Mods'
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
           steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
           steamGuard: ::add-mask::${{ secrets.steamguard }}
+          ssfnContents: ::add-mask::${{ secrets.ssfnContents }}
+          ssfnFileName: ::add-mask::${{ secrets.ssfn_file_name }}
+          steamConfigVdf: ::add-mask::${{ secrets.steam_config_vdf }}
