@@ -26,7 +26,7 @@ jobs:
               echo $i
           done
       - name: "Workshop update"
-        uses: kontu/workshop@fe3fce23810a852fcf07bc7ffed911d84d5fa456
+        uses: kontu/workshop@f22bd69d8fe94c741bb138991d186e845d485795
         with:
           path: 'Mods'
           steamAcct: ::add-mask::${{ secrets.steamAcct }}
