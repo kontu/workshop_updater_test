@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: "Workshop update"
-        uses: kontu/workshop@a7c27ce0f6ec07cf779a761ffafda06dcb118fc3
+        uses: kontu/workshop@bafb220d82834cd8d9360feee5fae351a4e4ef08
         with:
           path: 'Mods'
           steamAcct: ${{ secrets.steamAcct }}
