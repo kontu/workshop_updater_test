@@ -16,11 +16,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: "Workshop update"
-        uses: kontu/workshop@8afd57f439b7f1306deb5a5aa927b906e5d68d28
+        uses: kontu/workshop@latest
         with:
           path: 'Mods'
           steamAcct: ${{ secrets.steamAcct }}
-          steamPasswd: ::add-mask::${{ secrets.steamPasswd }}
+          steamPasswd: ${{ secrets.steamPasswd }}
           ssfnContents: ${{ secrets.ssfnContents }}
           ssfnFileName: 'ssfn9160040175199086881'
           steamConfigVdf: ${{ secrets.steam_config_vdf }}
