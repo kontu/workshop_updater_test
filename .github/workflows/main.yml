@@ -23,5 +23,5 @@ jobs:
           steamAcct: ${{ secrets.steamAcct }}
           steamPasswd: ${{ secrets.steamPasswd }}
           ssfnContents: ${{ secrets.ssfnContents }}
-          ssfnFileName: ${{ secrets.ssfnFileName }}
+          ssfnFileName: 'ssfn5696772061836425986'
           steamConfigVdf: ${{ secrets.steam_config_vdf }}
