@@ -1,9 +1,9 @@
 "workshopitem" {
   "appid" "244850"
   "publishedfileid" "2793887141"
-  "contentfolder" "Mods/mod_two"
-  "previewfile" "Mods/mod_two/thumb.png"
+  "contentfolder" "Mods\mod_two"
+  "previewfile" "Mods\mod_two\thumb.png"
   "visibility" "0"
-  "title" "Mods/mod_two"
+  "title" "Mods\mod_two"
   "changenote" ""
 }
