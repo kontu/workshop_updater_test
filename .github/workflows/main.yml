@@ -5,8 +5,6 @@ on:
   push:
     paths:
       - 'Mods/**'
-  
-
 
 jobs:
   updateWorkshop:
@@ -17,11 +15,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: "Workshop update"
-        uses: kontu/workshop@latest
+        uses: kontu/workshop_updater@v1.0
         with:
           path: 'Mods'
           steamAcct: ${{ secrets.steamAcct }}
           steamPasswd: ${{ secrets.steamPasswd }}
           ssfnContents: ${{ secrets.ssfnContents }}
           ssfnFileName: 'ssfn1098596842295311902'
-          steamConfigVdf: ${{ secrets.STEAM_CONFIG_VDF }}
+          steamConfigVdf: ${{ secrets.steam_config_vdf }}
