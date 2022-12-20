@@ -20,8 +20,8 @@ jobs:
         uses: kontu/workshop_updater@latest
         with:
           modNames: ${{ inputs.modNames }}
-          # steamAcct: ${{ secrets.steamAcct }}
-          # steamPasswd: ${{ secrets.steamPasswd }}
-          # ssfnContents: ${{ secrets.ssfnContents }}
-          # ssfnFileName: ${{ secrets.ssfnFileName }}'
-          # steamConfigVdf: ${{ secrets.steam_config_vdf }}
+          steamAcct: ${{ secrets.steamAcct }}
+          steamPasswd: ${{ secrets.steamPasswd }}
+          ssfnContents: ${{ secrets.ssfnContents }}
+          ssfnFileName: ${{ secrets.ssfnFileName }}
+          steamConfigVdf: ${{ secrets.steam_config_vdf }}
