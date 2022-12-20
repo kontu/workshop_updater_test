@@ -2,9 +2,9 @@ name: update_steamWorkshop
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'Mods/**'
+    inputs:
+      modNames:
+        Description: 'Full name of mod folder to upload. Eg: DraconisOres6.0'
 
 jobs:
   updateWorkshop:
@@ -18,8 +18,9 @@ jobs:
         uses: kontu/workshop_updater@v1.0
         with:
           path: 'Mods'
+          modNames: ${{ inputs.modNames }}
           steamAcct: ${{ secrets.steamAcct }}
           steamPasswd: ${{ secrets.steamPasswd }}
           ssfnContents: ${{ secrets.ssfnContents }}
-          ssfnFileName: 'ssfn1098596842295311902'
+          ssfnFileName: ${{ secrets.ssfnFileName }}'
           steamConfigVdf: ${{ secrets.steam_config_vdf }}
