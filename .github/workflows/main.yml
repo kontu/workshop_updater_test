@@ -9,6 +9,7 @@ on:
 
 jobs:
   updateWorkshop:
+    secrets: inherit
     runs-on: [ubuntu-latest]
     steps:
       - name: checkout
@@ -18,10 +19,9 @@ jobs:
       - name: "Workshop update"
         uses: kontu/workshop_updater@latest
         with:
-          path: 'Mods'
           modNames: ${{ inputs.modNames }}
-          steamAcct: ${{ secrets.steamAcct }}
-          steamPasswd: ${{ secrets.steamPasswd }}
-          ssfnContents: ${{ secrets.ssfnContents }}
-          ssfnFileName: ${{ secrets.ssfnFileName }}'
-          steamConfigVdf: ${{ secrets.steam_config_vdf }}
+          # steamAcct: ${{ secrets.steamAcct }}
+          # steamPasswd: ${{ secrets.steamPasswd }}
+          # ssfnContents: ${{ secrets.ssfnContents }}
+          # ssfnFileName: ${{ secrets.ssfnFileName }}'
+          # steamConfigVdf: ${{ secrets.steam_config_vdf }}
