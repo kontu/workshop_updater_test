@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: "Workshop update"
-        uses: kontu/workshop_updater@v1.0
+        uses: kontu/workshop_updater@latest
         with:
           path: 'Mods'
           modNames: ${{ inputs.modNames }}
