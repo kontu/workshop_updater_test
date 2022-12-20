@@ -9,18 +9,8 @@ on:
 
 jobs:
   updateWorkshop:
-    runs-on: [ubuntu-latest]
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: "Workshop update"
-        uses: kontu/workshop_updater@latest
-        with:
-          modNames: ${{ inputs.modNames }}
-          steamAcct: ${{ secrets.steamAcct }}
-          steamPasswd: ${{ secrets.steamPasswd }}
-          ssfnContents: ${{ secrets.ssfnContents }}
-          ssfnFileName: ${{ secrets.ssfnFileName }}
-          steamConfigVdf: ${{ secrets.steam_config_vdf }}
+    secrets: inherit
+    uses: DraconisCluster/SE-DraconisToolsConfigs/.github/workflows/update_steam_reusable.yml@main
+    with:
+      modNames: ${{ inputs.modNames }}
+
