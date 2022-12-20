@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       modNames:
-        Description: 'Full name of mod folder to upload. Eg: DraconisOres6.0'
+        Description: 'Full name of mod vdf to upload. If uploading multiple mods, separate with a space. Eg: `DraconisDIE_Nebula.vdf` or `DraconisDIE_Nebula`'
+        required: true
 
 jobs:
   updateWorkshop:
