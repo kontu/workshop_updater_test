@@ -10,7 +10,7 @@ on:
 jobs:
   updateWorkshop:
     secrets: inherit
-    uses: DraconisCluster/SE-DraconisToolsConfigs/.github/workflows/update_steam_reusable.yml@latest
+    uses: DraconisCluster/SE-DraconisToolsConfigs/.github/workflows/update_steam_reusable.yml@main
     with:
       modNames: ${{ inputs.modNames }}
 
