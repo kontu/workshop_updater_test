@@ -11,6 +11,6 @@ jobs:
   updateWorkshop:
     secrets: inherit
     uses: DraconisCluster/SE-DraconisToolsConfigs/.github/workflow/update_steam_reusable.yml@latest
-      with:
+    with:
       modNames: ${{ inputs.modNames }}
 
